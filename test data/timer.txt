@@ -1,0 +1,40 @@
+void start() {
+    Spaceship spaceship;
+    random_shuffle(words.begin(), words.end());
+    string input;
+    for (const string& word : words) {
+        cout << "\t\t\t\t\t\t\t\t Incoming ship: " << endl;
+        cout << "\t\t\t\t\t\t\t\t Word: " << word << endl;
+
+        auto start_time = chrono::high_resolution_clock::now();
+        bool entered_input = cin >> input;
+        auto end_time = chrono::high_resolution_clock::now();
+        auto duration = chrono::duration_cast<chrono::seconds>(end_time - start_time).count();
+
+        if (duration > 10) {
+            cout << "\t\t\t\t\t\t\t\t Time's up!" << endl;
+            lives--;
+        }
+        else if (entered_input) {
+            if (input == word) {
+                cout << "\t\t\t\t\t\t\t\t Correct!" << endl;
+                score += 10;
+            }
+            else if (input == "shoot") {
+                spaceship.printShoot(word);
+            }
+            else {
+                cout << "\t\t\t\t\t\t\t\t Incorrect, try again." << endl;
+                lives--;
+            }
+        }
+
+        if (lives == 0) {
+            cout << "\t\t\t\t\t\t\t\t Game Over!" << endl;
+            break;
+        }
+        system("cls");
+        cout << "\t\t\t\t\t\t\t\t Your score is: " << score << "  Lives left: " << lives << "  Time left: " << (10 - duration) << " seconds" << endl;
+    }
+    updateHighScore();
+}

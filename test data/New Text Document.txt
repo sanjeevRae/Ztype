@@ -1,0 +1,138 @@
+
+    while (true) {
+        cout << "\t\t\t\t\t\t\t\t 1. Instructions" << endl;
+        cout << "\t\t\t\t\t\t\t\t 2. Start" << endl;
+        cout << "\t\t\t\t\t\t\t\t 3. Exit" << endl;
+        cin >> choice;
+        system("cls");
+        
+        switch (choice) {
+             case 1:
+                ZtypeGame_Easy().instructions();
+                break;
+                
+            case 2:
+            	
+            int category;
+   			while (true) 
+			   {
+			   	system("cls");
+			   	cout << endl;
+			   	cout << endl;
+			   	cout << endl;
+			   	cout << endl;
+        		cout << "\t\t\t\t\t\t\t\t Choose game category" << endl;
+            	cout << "\t\t\t\t\t\t\t\t 1. Music" << endl;
+        		cout << "\t\t\t\t\t\t\t\t 2. Sport" << endl;
+       			cout << "\t\t\t\t\t\t\t\t 3. Electronic" << endl;
+       			cout << "\t\t\t\t\t\t\t\t 4. Exit" << endl;
+        cin >> category;
+        switch (category) 
+		{
+            case 1:
+               int category;
+   			while (true) 
+			   {
+			   	system("cls");
+			   	cout << endl;
+			   	cout << endl;
+			   	cout << endl;
+			   	cout << endl;
+        		cout << "\t\t\t\t\t\t\t\t Select Mode" << endl;
+            	cout << "\t\t\t\t\t\t\t\t 1. Easy" << endl;
+        		cout << "\t\t\t\t\t\t\t\t 2. Medium" << endl;
+       			cout << "\t\t\t\t\t\t\t\t 3. Hard" << endl;
+       			cout << "\t\t\t\t\t\t\t\t 4. Exit" << endl;
+        cin >> category;
+        switch (category) 
+		{
+            case 1:
+                ZtypeGame_Easy().start(); break;
+                break;
+            case 2:
+                ZtypeGame_Medium().start(); break;
+            case 3:
+               ZtypeGame_Hard().start(); break;
+            case 4: 
+            	cout << "\\t\t\t\t\t\t\t\t Exiting..." << endl;
+            return 0;
+            default:
+                cout << "\t\t\t\t\t\t\t\t Invalid choice, please try again." << endl;
+        }   
+    }     
+            case 2:
+                int Mode;
+   			while (true) 
+			   {system("cls");
+			   	cout << endl;
+			   	cout << endl;
+			   	cout << endl;
+			   	cout << endl;
+        		cout << "\t\t\t\t\t\t\t\t Select Mode" << endl;
+            	cout << "\t\t\t\t\t\t\t\t 1. Easy" << endl;
+        		cout << "\t\t\t\t\t\t\t\t 2. Medium" << endl;
+       			cout << "\t\t\t\t\t\t\t\t 3. Hard" << endl;
+       			cout << "\t\t\t\t\t\t\t\t 4. Exit" << endl;
+        cin >> Mode;
+        switch (Mode) 
+		{
+            case 1:
+                ZtypeGameA_Easy().start(); break;
+                break;
+            case 2:
+                ZtypeGameA_Medium().start(); break;
+            case 3:
+               ZtypeGameA_Hard().start(); break;
+            case 4: 
+            	cout << "\\t\t\t\t\t\t\t\t Exiting..." << endl;
+            return 0;
+            default:
+                cout << "\t\t\t\t\t\t\t\t Invalid choice, please try again." << endl;
+        }   
+    }              
+            case 3:
+             int Mode_A;
+   			while (true) 
+			   {system("cls");
+			   	cout << endl;
+			   	cout << endl;
+			   	cout << endl;
+			   	cout << endl;
+        		cout << "\t\t\t\t\t\t\t\t Select Mode" << endl;
+            	cout << "\t\t\t\t\t\t\t\t 1. Easy" << endl;
+        		cout << "\t\t\t\t\t\t\t\t 2. Medium" << endl;
+       			cout << "\t\t\t\t\t\t\t\t 3. Hard" << endl;
+       			cout << "\t\t\t\t\t\t\t\t 4. Exit" << endl;
+        cin >> Mode_A;
+        switch (Mode_A) 
+		{
+            case 1:
+                ZtypeGameB_Easy().start(); break;
+                break;
+            case 2:
+                ZtypeGameB_Medium().start(); break;
+            case 3:
+               ZtypeGameB_Hard().start(); break;
+            case 4: 
+            	cout << "\\t\t\t\t\t\t\t\t Exiting..." << endl;
+            return 0;
+            default:
+                cout << "\t\t\t\t\t\t\t\t Invalid choice, please try again." << endl;
+        }   
+    }     
+    
+            default:
+           
+                cout << "\t\t\t\t\t\t\t\t Invalid choice, please try again." << endl;
+        }
+    }
+    
+            case 3:
+                return 0;
+            default:
+                cout << "\t\t\t\t\t\t\t\t Invalid choice, please try again." << endl;
+        }
+    }
+    return 0;
+}
+		
